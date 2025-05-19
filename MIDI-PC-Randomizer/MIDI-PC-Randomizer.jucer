@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="j7sXOU" name="MIDI-PC-Randomizer" projectType="audioplug"
+              projectLineFeed="&#10;" reportAppUsage="0" displaySplashScreen="0"
+              pluginCharacteristicsValue="pluginIsMidiEffectPlugin,pluginProducesMidiOut,pluginWantsMidiIn"
+              version="1.0.0" companyName="Getdunne" companyCopyright="(c)2025 Shane Dunne"
+              companyWebsite="https://github.com/getdunne/midi-effects" pluginManufacturerCode="GtDn"
+              pluginCode="MPRa" jucerFormatVersion="1" headerPath="../../../Common&#10;"
+              defines="JUCE_MODAL_LOOPS_PERMITTED=1" pluginFormats="buildVST,buildVST3">
+  <MAINGROUP id="lsoBrg" name="MIDI-PC-Randomizer">
+    <GROUP id="{4A9EDB8B-A99B-9875-A272-F15FA515E200}" name="Common">
+      <FILE id="Rouurj" name="BasicKnob.cpp" compile="1" resource="0" file="../Common/BasicKnob.cpp"/>
+      <FILE id="qamAHi" name="BasicKnob.h" compile="0" resource="0" file="../Common/BasicKnob.h"/>
+      <FILE id="XN1lSj" name="LabeledKnob.cpp" compile="1" resource="0" file="../Common/LabeledKnob.cpp"/>
+      <FILE id="joBcwn" name="LabeledKnob.h" compile="0" resource="0" file="../Common/LabeledKnob.h"/>
+      <FILE id="mXsMvs" name="ParameterListeners.h" compile="0" resource="0"
+            file="../Common/ParameterListeners.h"/>
+      <FILE id="psqJVp" name="ParametersEditor.cpp" compile="1" resource="0"
+            file="../Common/ParametersEditor.cpp"/>
+      <FILE id="i6pOYS" name="ParametersEditor.h" compile="0" resource="0"
+            file="../Common/ParametersEditor.h"/>
+      <FILE id="gRtNjU" name="ParametersManager.cpp" compile="1" resource="0"
+            file="../Common/ParametersManager.cpp"/>
+      <FILE id="BaQwg5" name="ParametersManager.h" compile="0" resource="0"
+            file="../Common/ParametersManager.h"/>
+    </GROUP>
+    <GROUP id="{5B69BA3F-922F-56BE-56B7-32BB172BD61A}" name="Plugin">
+      <FILE id="W6m0Or" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Plugin/PluginProcessor.cpp"/>
+      <FILE id="H76TPd" name="PluginProcessor.h" compile="0" resource="0"
+            file="Plugin/PluginProcessor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX" hardenedRuntime="1">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release" enablePluginBinaryCopyStep="0" osxCompatibility="10.9 SDK"
+                       codeSigningIdentity="Developer ID Application: Dunne &amp; Associates Technology Consulting, Inc (W5AEHZN66V)"
+                       macOSDeploymentTarget="10.9"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_opengl"/>
+        <MODULEPATH id="juce_gui_extra"/>
+        <MODULEPATH id="juce_gui_basics"/>
+        <MODULEPATH id="juce_graphics"/>
+        <MODULEPATH id="juce_events"/>
+        <MODULEPATH id="juce_data_structures"/>
+        <MODULEPATH id="juce_cryptography"/>
+        <MODULEPATH id="juce_core"/>
+        <MODULEPATH id="juce_audio_utils"/>
+        <MODULEPATH id="juce_audio_processors"/>
+        <MODULEPATH id="juce_audio_plugin_client"/>
+        <MODULEPATH id="juce_audio_formats"/>
+        <MODULEPATH id="juce_audio_devices"/>
+        <MODULEPATH id="juce_audio_basics"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="C:\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_devices" path="C:\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_formats" path="C:\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="C:\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_processors" path="C:\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_utils" path="C:\JUCE\modules"/>
+        <MODULEPATH id="juce_core" path="C:\JUCE\modules"/>
+        <MODULEPATH id="juce_cryptography" path="C:\JUCE\modules"/>
+        <MODULEPATH id="juce_data_structures" path="C:\JUCE\modules"/>
+        <MODULEPATH id="juce_events" path="C:\JUCE\modules"/>
+        <MODULEPATH id="juce_graphics" path="C:\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_basics" path="C:\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_extra" path="C:\JUCE\modules"/>
+        <MODULEPATH id="juce_opengl" path="C:\JUCE\modules"/>
+      </MODULEPATHS>
+    </VS2022>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <WINDOWS/>
+    <OSX/>
+  </LIVE_SETTINGS>
+  <JUCEOPTIONS JUCE_VST3_CAN_REPLACE_VST2="0" JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+</JUCERPROJECT>

@@ -75,7 +75,7 @@ void PluginProcessor::processBlock(AudioBuffer<float>&, MidiBuffer& midiIn)
         triggered = false;
     }
 
-    for (auto& mm : midiIn)
+    for (auto mm : midiIn)
     {
         auto inMsg = mm.getMessage();
         auto pos = mm.samplePosition;

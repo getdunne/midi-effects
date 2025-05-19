@@ -52,17 +52,21 @@ void PluginProcessor::processBlock(AudioBuffer<float>&, MidiBuffer& midiIn)
     MidiBuffer midiOut;
     for (auto& mm : midiIn)
     {
-        auto msg = mm.getMessage();
+        auto inMsg = mm.getMessage();
         auto pos = mm.samplePosition;
-        auto ch = msg.getChannel();
+        auto ch = inMsg.getChannel();
 
         if ((matchChannel != 0) && (matchChannel != ch)) continue;
 
-        if (msg.isProgramChange())
+        if (inMsg.isProgramChange())
         {
             int progNum = dis(gen);
             auto outMsg = MidiMessage::programChange(ch, progNum);
             midiOut.addEvent(outMsg, pos);
+        }
+        else
+        {
+            midiOut.addEvent(inMsg, pos);
         }
     }
     midiIn.swapWith(midiOut);

@@ -3,7 +3,7 @@ This MIDI-effect listens for MIDI program-change (PC) messages, and outputs a mo
 
 The GUI provides three sliders:
 
-![screenshot](./MIDI-PC-Randomizer.png)
+![screenshot](MIDI-PC-Randomizer.png)
 
 ### Parameters
 

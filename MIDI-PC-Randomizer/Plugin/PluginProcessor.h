@@ -55,6 +55,9 @@ protected:
     AudioParameterInt* midiChParam;
     AudioParameterInt* outMinParam;
     AudioParameterInt* outMaxParam;
+    AudioParameterBool* triggerParam;
+    bool lastTriggerParamValue = false;
+    bool triggered = false;
 
 private:
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PluginProcessor)

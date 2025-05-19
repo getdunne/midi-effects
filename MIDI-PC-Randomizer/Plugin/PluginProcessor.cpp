@@ -22,9 +22,11 @@ PluginProcessor::PluginProcessor()
     midiChParam = params.addInt("midiChannel", "MIDI Channel", 0, 16, 0);
     outMinParam = params.addInt("outMin", "Out Min", 0, 127, 0);
     outMaxParam = params.addInt("outMax", "Out Max", 0, 127, 127);
+    triggerParam = params.addBool("trigger", "Trigger", false);
 
     outMinParam->addListener(this);
     outMaxParam->addListener(this);
+    triggerParam->addListener(this);
 }
 
 bool PluginProcessor::isBusesLayoutSupported(const BusesLayout& layout) const
@@ -41,7 +43,21 @@ void PluginProcessor::prepareToPlay(double, int)
 
 void PluginProcessor::parameterValueChanged(int parameterIndex, float newValue)
 {
-    dis = std::uniform_int_distribution<>(*outMinParam, *outMaxParam);
+    switch (parameterIndex)
+    {
+    case 0: // MIDI channel
+        break;
+
+    case 1: // outMin
+    case 2: // outMax
+        dis = std::uniform_int_distribution<>(*outMinParam, *outMaxParam);
+        break;
+
+    case 3: // trigger
+        triggered = (*triggerParam && !lastTriggerParamValue);
+        lastTriggerParamValue = *triggerParam;
+        break;
+    }
 }
 
 // Process one buffer ("block") of data
@@ -50,6 +66,15 @@ void PluginProcessor::processBlock(AudioBuffer<float>&, MidiBuffer& midiIn)
     int matchChannel = *midiChParam;
 
     MidiBuffer midiOut;
+    if (triggered)
+    {
+        int ch = (matchChannel == 0) ? 1 : matchChannel;
+        int progNum = dis(gen);
+        auto outMsg = MidiMessage::programChange(ch, progNum);
+        midiOut.addEvent(outMsg, 0);
+        triggered = false;
+    }
+
     for (auto& mm : midiIn)
     {
         auto inMsg = mm.getMessage();

@@ -3,7 +3,7 @@
 constexpr int DEFAULT_MARGIN = 20;
 constexpr int DEFAULT_PADDING = 2;
 constexpr int DEFAULT_SLIDER_WIDTH = 300;
-constexpr int DEFAULT_LABEL_WIDTH = 70;
+constexpr int DEFAULT_LABEL_WIDTH = 90;
 constexpr int DEFAULT_TEXT_BOX_WIDTH = 80;
 constexpr int DEFAULT_SLIDER_HEIGHT = (20 + 2 * DEFAULT_PADDING);
 constexpr int DEFAULT_TOGGLE_HEIGHT = (24 + 2 * DEFAULT_PADDING);

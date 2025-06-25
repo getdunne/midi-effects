@@ -35,6 +35,7 @@ public:
     void prepareToPlay(double /*sampleRate*/, int /*maxSamplesPerBlock*/) override;
     void releaseResources() override {}
     void processBlock (AudioBuffer<float>&, MidiBuffer&) override;
+    void processBlockBypassed(AudioBuffer<float>&, MidiBuffer&) override {}
 
     // Enabling the host to save and restore state
     void getStateInformation (MemoryBlock& destData) override;

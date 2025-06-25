@@ -38,7 +38,7 @@
         <CONFIGURATION isDebug="1" name="Debug"/>
         <CONFIGURATION isDebug="0" name="Release" enablePluginBinaryCopyStep="0" osxCompatibility="10.13 SDK"
                        codeSigningIdentity="Developer ID Application: Dunne &amp; Associates Technology Consulting, Inc (W5AEHZN66V)"
-                       customXcodeFlags="OTHER_CODE_SIGN_FLAGS=--timestamp"/>
+                       customXcodeFlags="OTHER_CODE_SIGN_FLAGS=--timestamp" macOSDeploymentTarget="10.13"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_opengl"/>

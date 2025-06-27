@@ -3,7 +3,7 @@
 <JUCERPROJECT id="j7sXOU" name="MIDI-Channel-Filter" projectType="audioplug"
               projectLineFeed="&#10;" reportAppUsage="0" displaySplashScreen="0"
               pluginCharacteristicsValue="pluginIsMidiEffectPlugin,pluginProducesMidiOut,pluginWantsMidiIn"
-              version="1.0.0" companyName="Getdunne" companyCopyright="(c)2025 Shane Dunne"
+              version="1.1.0" companyName="Getdunne" companyCopyright="(c)2025 Shane Dunne"
               companyWebsite="https://github.com/getdunne/midi-effects" pluginManufacturerCode="GtDn"
               pluginCode="MPRa" jucerFormatVersion="1" headerPath="../../../Common&#10;"
               defines="JUCE_MODAL_LOOPS_PERMITTED=1" pluginFormats="buildAU,buildVST,buildVST3">
@@ -15,16 +15,15 @@
       <FILE id="joBcwn" name="LabeledKnob.h" compile="0" resource="0" file="../Common/LabeledKnob.h"/>
       <FILE id="mXsMvs" name="ParameterListeners.h" compile="0" resource="0"
             file="../Common/ParameterListeners.h"/>
-      <FILE id="psqJVp" name="ParametersEditor.cpp" compile="1" resource="0"
-            file="../Common/ParametersEditor.cpp"/>
-      <FILE id="i6pOYS" name="ParametersEditor.h" compile="0" resource="0"
-            file="../Common/ParametersEditor.h"/>
       <FILE id="gRtNjU" name="ParametersManager.cpp" compile="1" resource="0"
             file="../Common/ParametersManager.cpp"/>
       <FILE id="BaQwg5" name="ParametersManager.h" compile="0" resource="0"
             file="../Common/ParametersManager.h"/>
     </GROUP>
     <GROUP id="{5B69BA3F-922F-56BE-56B7-32BB172BD61A}" name="Plugin">
+      <FILE id="ukMLgU" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Plugin/PluginEditor.cpp"/>
+      <FILE id="fyYIe5" name="PluginEditor.h" compile="0" resource="0" file="Plugin/PluginEditor.h"/>
       <FILE id="W6m0Or" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Plugin/PluginProcessor.cpp"/>
       <FILE id="H76TPd" name="PluginProcessor.h" compile="0" resource="0"

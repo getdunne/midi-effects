@@ -43,11 +43,11 @@ public:
     // Automation parameters
     ParametersManager params;
 
-protected:
     AudioParameterInt* midiChParam;
     AudioParameterBool* filterProgParam;
     AudioParameterBool* filterBankMsbParam;
     AudioParameterBool* filterBankLsbParam;
+    AudioParameterBool* blockChannelParam[16];
 
 private:
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PluginProcessor)
